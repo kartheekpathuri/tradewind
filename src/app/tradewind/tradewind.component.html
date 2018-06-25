@@ -1,0 +1,85 @@
+<div style="background-color: black">
+  <div style="width:30%;margin:auto;padding-top: 2em;">
+    <input type="number" [(ngModel)]="configuredNo">
+    <button (click)="setValue()">Set Config No</button>
+    <p style='color:white'>From
+      <select>
+        <option *ngFor="let value of dealCodeFrom">
+          {{value}}
+        </option>
+      </select>
+
+      <span style='color:white'>Credit Pool
+          <select>
+            <option *ngFor="let key of poolLimits ">
+              {{key}}
+            </option>
+          </select>
+        </span>
+    </p>
+    
+  </div>
+  <div style="margin-top:1em;color: white">
+
+    <table #myTable>
+      <tr attr.id="{{from}}" *ngFor="let from of dealCodeFrom">
+        <td style='color:white;max-width: 15px;'>
+          <b>From {{from}}</b>
+        </td>
+      </tr>
+    </table>
+
+    <!-- <table>
+    <tr>
+      <td style="width:10em; text-align: center;font-weight: bold;">>= Limit</td>
+      <td bgcolor="#FF512C" style="height:10em;font-weight: bold;" *ngFor="let pool of limitExceeded">CP {{pool}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td style="width:10em; text-align: center;font-weight: bold;">>= Warning Pct</td>
+      <td bgcolor="#FFCC00"  style="height:10em;font-weight: bold;" *ngFor="let pool of wrngExceeded">CP {{pool}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td style="width:10em; text-align: center;font-weight: bold;">>= Configured No</td>
+      <td bgcolor="#94D878" style="height:10em;font-weight: bold;" *ngFor="let pool of cfgdnoExceeded">CP {{pool}}</td>
+    </tr>
+  </table> -->
+
+    <!-- <table>
+    
+      <tr *ngFor="let from of dealCodeFrom">{{from}}
+        <td *ngFor="let to of dealCodeTo; let i = index;" id='{{from}}x{{i}}'>
+          {{to}}
+           <!-- <span >{{to}}</span> -->
+    <!-- </td> -->
+    <!-- </tr> -->
+    <!-- </table> -->
+
+
+
+    <!-- Working nxn grid -->
+    <!-- <table>
+    <tr> -->
+    <!-- <td>Deal Code</td> -->
+    <!-- <td>To</td> -->
+    <!-- <td *ngFor='let from of dealCodeFrom'>{{from}}</td> -->
+    <!-- </tr>
+  </table> -->
+
+    <!-- <table> -->
+    <!-- <td>To</td> -->
+    <!-- <tr *ngFor='let from of dealCodeFrom'> -->
+    <!-- <td> </td> -->
+    <!-- <td *ngFor='let to of dealCodeTo' id='{{from}}x{{to}}'></td>
+    </tr>
+  </table> -->
+
+    <!-- Working nxn grid -->
+
+  </div>
+</div>

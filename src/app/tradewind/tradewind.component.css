@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    border:solid 1px;
+    max-width:7em;
+    max-height:0.2em;
+    font-size: 0.8em;
+    /* width:3%; */
+}
+
+tr {
+    border:solid 1px;
+    max-width:7em;
+    text-align: center;
+    border:solid 1px;
+    max-height:0.2em;
+    color:black;
+    /* width:3%; */
+}
+
+
+.cell{
+    border:solid 1px;
+    min-width: 5rem;
+    text-align: center;
+    border:solid 1px;
+    font-size: 0.1em;
+}
+
+.togreen{
+    background: #94D878;
+    transition:color 1s ease;
+}
+
+.togrey{
+    background: #DCDCDC;
+    transition:color 1s ease;    
+}
+
+.toyellow{
+    background: #FFCC00;
+    transition:color 5s ease; 
+}
+
+.togrey::after{
+    background-color: rgb(165, 14, 14);
+    transform-origin:left;
+    transition:width 0.25s ease;
+    z-index:-1;
+}
